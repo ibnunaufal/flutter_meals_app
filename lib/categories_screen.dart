@@ -12,10 +12,12 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Meals')),
       body: GridView(
+        padding: const EdgeInsets.all(25),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200, childAspectRatio: 3 / 2),
-        children:
-            DUMMY_CATEGORIES.map((e) => CategoryItem(e.title, e.color)).toList(),
+            maxCrossAxisExtent: 200, childAspectRatio: 3 / 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
+        children: DUMMY_CATEGORIES
+            .map((e) => CategoryItem(e.title, e.color))
+            .toList(),
       ),
     );
   }
