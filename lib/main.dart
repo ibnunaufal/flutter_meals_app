@@ -43,8 +43,9 @@ class MyApp extends StatelessWidget {
       ),
       home: CategoriesScreen(),
       //const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: '/',
       routes: {
-        '/category-meals': (context) => CategoryMealsScreen()
+        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen()
       },
     );
   }
